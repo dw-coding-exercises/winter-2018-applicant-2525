@@ -119,7 +119,9 @@
               :name "city"}]
      [:label {:for "state-field"} "State:"]
      [:select {:id "state-field"
-               :name "state"}
+               :name "state"
+               ; Make STATE selection required so can make api call
+               :required ""}
       [:option ""]
       (for [state us-state/postal-abbreviations]
         [:option {:value state} state])]
